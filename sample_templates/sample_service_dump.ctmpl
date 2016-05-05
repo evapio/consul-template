@@ -1,0 +1,1 @@
+[{{range $index, $services := services}}{{range service .Name}}{{if gt $index 0}},{{end}}{{. | toJSON}}{{end}}{{end}}]

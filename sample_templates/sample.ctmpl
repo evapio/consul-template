@@ -1,0 +1,3 @@
+[{
+{{range $index, $services := services}}{{if $index}},{{end}}"{{.Name}}.service.evap" :[{{range $index1, $service := service .Name}}{{if $index1}},{{end}}{"ID":"{{.ID}}", "ServiceName":"{{.Name}}", "ServiceAddress":"{{.Address}}", "ServicePort":{{.Port}}, "ServiceTags":"{{.Tags | join ","}}"}{{end}}]{{end}}
+}]

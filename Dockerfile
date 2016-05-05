@@ -18,4 +18,8 @@ RUN apk -U add zip bash && \
     apk del zip && \
     rm -rf /var/cache/apk/*
 
-CMD [ "/usr/local/bin/consul-template"]
+COPY watchdog.sh /usr/local/bin/watchdog
+
+RUN chmod +x /usr/local/bin/watchdog
+
+CMD [ "/usr/local/bin/watchdog"]

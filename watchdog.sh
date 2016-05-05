@@ -10,4 +10,4 @@ wget http://$CONSUL_HTTP_ADDR/v1/kv/$PROJECT_ID/$PROJECT_ID.ctmpl?raw -O /consul
 
 echo "Acquired Config and Template"
 
-consul-template -config /consul-template/config.d/$PROJECT_ID.conf
+exec consul-template -config /consul-template/config.d/$PROJECT_ID.conf
